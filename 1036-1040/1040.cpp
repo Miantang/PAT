@@ -26,11 +26,11 @@ int main() {
     }
     indexA = find(line.begin(), line.end(), 'A');
     lastIndexA = line.begin();
-    int countT = count(line.begin(), line.end(), 'T');
+    int countT = count(line.begin(), line.end(), 'T') +count(line.begin(), line.end(), 't');
     while(indexA != line.end())
     {
-        countP += count(lastIndexA, indexA, 'P');
-        countT -= count(lastIndexA, indexA, 'T');
+        countP += count(lastIndexA, indexA, 'P') + count(lastIndexA, indexA, 'p');
+        countT -= count(lastIndexA, indexA, 'T') + count(lastIndexA, indexA, 't');
         sum += countP*countT;
         *indexA = '#';
         lastIndexA = indexA;
