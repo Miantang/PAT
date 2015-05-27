@@ -19,18 +19,13 @@ int main() {
     cin >> line;
     string::iterator indexA , lastIndexA;
     int countP = 0,  sum = 0;
-    
-    for(string::iterator i = line.begin(); i != line.end(); ++i)
-    {
-
-    }
     indexA = find(line.begin(), line.end(), 'A');
     lastIndexA = line.begin();
-    int countT = count(line.begin(), line.end(), 'T') +count(line.begin(), line.end(), 't');
+    int countT = count(line.begin(), line.end(), 'T') ;
     while(indexA != line.end())
     {
-        countP += count(lastIndexA, indexA, 'P') + count(lastIndexA, indexA, 'p');
-        countT -= count(lastIndexA, indexA, 'T') + count(lastIndexA, indexA, 't');
+        countP += count(lastIndexA, indexA, 'P');
+        countT -= count(lastIndexA, indexA, 'T');
         sum += countP*countT;
         *indexA = '#';
         lastIndexA = indexA;
