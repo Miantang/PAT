@@ -13,11 +13,12 @@ int main() {
 
     int N;
     scanf("%d", &N);
-    int a, b;
+    long a, b;
     long c;
     for(int i = 1; i <= N; ++i)
     {
-        scanf("%d%d%d", &a, &b, &c);
+        scanf("%d%d%ld", &a, &b, &c);
+        // cin>> a >> b >> c;
         if(a + b > c)
             printf("Case #%d: true\n", i);
         else
