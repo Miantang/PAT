@@ -1,4 +1,5 @@
 ###1. string转int， double：
+
 #####C++11做法：
 
 1. int **stoi**(const string&  str, size_t* idx = 0, int base = 10);
@@ -30,8 +31,10 @@ double moon = stod(orbits.substr(sz));  // 29.53
 
 2. double,long **strtod**, **strtol**(const char* str, char** endptr);
 
-3. sstream
+3. **stringstream**
+
 ###1. int,double转string：
+
 #####C++11做法：
 
 1. **to_string**(number)
@@ -54,6 +57,5 @@ ss << number;
 ss >> str;
 cout << str << endl;
 ```
-
 3. int如果是单字符用char(nubmer+'0')
 
